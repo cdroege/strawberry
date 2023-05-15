@@ -74,7 +74,7 @@ class MissingTypesForGenericError(Exception):
 
     def __init__(self, annotation: Union[StrawberryType, type]):
         message = (
-            f'The type "{repr(annotation)}" is generic, but no type has been passed'
+            f'The type "{annotation!r}" is generic, but no type has been passed'
         )
 
         super().__init__(message)
